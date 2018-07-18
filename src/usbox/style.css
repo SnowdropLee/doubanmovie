@@ -1,0 +1,27 @@
+.item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .item>a{
+    display: block;
+    display: flex;
+  }
+  .item .cover,
+  .item .cover img{
+    width: 70px;
+  }
+  .item .detail {
+    flex: 1;
+    padding-left: 10px;
+  }
+  .item .detail h2{
+    font-size: 16px;
+  }
+  .item .detail .extra{
+    color: #999;
+    margin-top: 4px;
+  }
+  .item .detail .score{
+    color: #FF5722;
+  }
