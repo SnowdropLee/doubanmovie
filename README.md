@@ -12,7 +12,7 @@
   细节优化:图片懒加载
   
  # 预览地址
-   [预览地址](https://websnowdrop.github.io/doubanmovie/dist/index.html)
+   [预览地址](https://github.com/WebsnowDrop/doubanmovie)
   
   
   
