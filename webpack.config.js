@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-      index: './src/index.js'
+      index: './js/oop.js'
   },
   devtool: 'inline-source-map',
   devServer : {

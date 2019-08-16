@@ -27,7 +27,7 @@ var Usbox = {
         var tpl = `<div class="item">
             <a href="#">
               <div class="cover">
-                <img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
+                <img src="https://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
               </div>
               <div class="detail">
                 <h2>霸王别姬</h2>

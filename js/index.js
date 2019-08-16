@@ -16,7 +16,7 @@ function load(){
   $('.loading').show()
   $.ajax({
     type: 'GET',
-    url: 'https://api.douban.com/v2/movie/top250',
+    url: 'https://douban-api.now.sh/v2/movie/top250',
     data: {
       start: startNum,
       count: 20,
@@ -41,7 +41,7 @@ function renderData(data){
     var tpl = `<div class="item">
     <a href="#">
       <div class="cover">
-        <img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
+        <img src="https://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
       </div>
       <div class="detail">
         <h2>霸王别姬</h2>

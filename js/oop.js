@@ -59,7 +59,7 @@ var Top250 = {
     $('.loading').show()
     $.ajax({
       type: 'GET',
-      url: 'https://api.douban.com/v2/movie/top250',
+      url: 'https://douban-api.now.sh/v2/movie/top250',
       data: {
         start: me.startNum * me.count,
         count: me.count,
@@ -87,7 +87,7 @@ var Top250 = {
       var tpl = `<div class="item">
           <a href="">
             <div class="cover">
-              <img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
+              <img src="https://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
             </div>
             <div class="detail">
               <h2>霸王别姬</h2>
@@ -99,8 +99,12 @@ var Top250 = {
           </a>
         </div>`
       var $node = $(tpl)
+      var url = movie.images.medium
+      var arr = url.split('')
+      arr.splice(4,0,'s')
+      url = arr.join('')
       //console.log($node)
-      $node.find('.cover img').attr('src',movie.images.medium)
+      $node.find('.cover img').attr('src',url)
       $node.find('.itme>a').href = movie.alt
       $node.find('.itme>a').attr('href',movie.alt)
       $node.find('.detail>h2').text(movie.title)
@@ -125,7 +129,7 @@ var Usbox = {
     var me = this
     $.ajax({
       type: 'GET',
-      url: 'https://api.douban.com/v2/movie/us_box',
+      url: 'https://douban-api.now.sh/v2/movie/us_box',
       dataType: 'jsonp'
     }).done(function(res){
       //console.log(res)
@@ -145,7 +149,7 @@ var Usbox = {
       var tpl = `<div class="item">
           <a href="#">
             <div class="cover">
-              <img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
+              <img src="https://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
             </div>
             <div class="detail">
               <h2>霸王别姬</h2>
@@ -243,7 +247,7 @@ var Search = {
     $('.loading').show()
     $.ajax({
       type : 'GET',
-      url :'https://api.douban.com/v2/movie/search',
+      url :'https://douban-api.now.sh/v2/movie/search',
       data : {
         start:me.startNum * me.count,
         count: me.count,
@@ -271,7 +275,7 @@ var Search = {
             var tpl = `<div class="item">
                     <a href="#">
                         <div class="cover">
-                            <img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
+                            <img src="https://img7.doubanio.com/view/photo/s_ratio_poster/public/p1910813120.jpg" alt="">
                         </div>
                         <div class="detail">
                             <h2>霸王别姬</h2>
